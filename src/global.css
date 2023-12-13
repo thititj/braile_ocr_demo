@@ -1,0 +1,56 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Noto Sans Thai', sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+  }
+  
+  h1, h2, h3, p {
+    margin: 0 0 1rem 0;
+  }
+  
+  /* Basic styling for the navigation bar */
+  nav {
+    background: #007bff;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Basic styling for content area */
+  .content {
+    padding: 2rem;
+  }
+  
+  /* Style for file input and textarea */
+  input[type='file'],
+  textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Button styling */
+  button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  

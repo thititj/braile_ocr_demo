@@ -1,0 +1,65 @@
+/* About.module.css */
+.aboutContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .teamSection, .ctaSection {
+    margin-bottom: 2rem;
+  }
+  
+  .teamMembers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .teamMember {
+    text-align: center;
+    margin: 1rem;
+  }
+  
+  .memberImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .mapsAndSocial {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .map {
+    margin: 1rem;
+  }
+  
+  .socialButton {
+    background-color: #4267B2; /* Facebook blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .socialButton:hover {
+    background-color: #365899; /* Darker Facebook blue */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .teamMembers, .mapsAndSocial {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

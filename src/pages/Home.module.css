@@ -1,0 +1,85 @@
+/* Home.module.css */
+.heroSection {
+    background-color: #007bff;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.heroButtons {
+    margin-top: 1rem;
+}
+
+.heroButton {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.keyFeatures {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.keyFeatures ul {
+    list-style: none;
+    padding: 0;
+}
+
+.keyFeatures li {
+    margin-bottom: 0.5rem;
+}
+
+.sponsors {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Home.module.css */
+.homeContainer {
+    text-align: center;
+}
+
+.welcomeText {
+    font-size: 2rem;
+    font-weight: 700;
+    /* Using a bolder weight for headings */
+}
+
+.descriptionText {
+    font-size: 1rem;
+    font-weight: 400;
+    /* Regular weight for paragraphs */
+}
+
+/* Home.module.css */
+.keyFeatures {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .featureCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .teamMember img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* This ensures the aspect ratio is maintained */
+    margin: 0 auto; /* Center the icon if needed */
+  }
+
+  .icon {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* This ensures the aspect ratio is maintained */
+  }

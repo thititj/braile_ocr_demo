@@ -1,0 +1,372 @@
+.ocr-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh; /* Full viewport height */
+    padding: 20px; /* Optional padding */
+}
+/* Upload Button Styles */
+.upload-btn {
+    /* Size and Shape */
+    padding: 50px 100px; /* Increased padding for a larger button */
+    border-radius: 30px; /* Rectangular shape with slightly rounded corners */
+
+    /* Color and Contrast */
+    background-color: #007bff; /* Example primary brand color - can be changed */
+    color: white; /* High contrast text */
+    border: none; /* Remove default border */
+
+    /* Text and Icons */
+    font-size: 32px; /* Larger font for better readability */
+    font-weight: bold; /* Bold text for prominence */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-btn p {
+    font-size: 16px;
+}
+
+.upload-btn-icon {
+    margin-right: 8px; /* Slightly more space between the icon and the text */
+    /* Add styles for the icon here, if it's an image or font icon */
+}
+
+/* Hover Effect */
+.upload-btn:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    cursor: pointer; /* Cursor change to indicate clickability */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slightly larger shadow for depth */
+}
+
+.upload-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-text, .upload-support-text {
+    margin: 0;
+}
+
+
+.image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    height: auto; /* 30% of the screen height */
+    margin: auto; /* Center the modal on the page */
+}
+
+.image-preview {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 200px;
+    position: relative;
+    transition: opacity 0.2s ease, border 0.2s ease;
+}
+
+.image-preview img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 30px;
+    position: relative;
+    background-color: #f8f8f8;
+    /* This will ensure the images cover the area, but are also cropped to fit */
+}
+
+/* Optional: Add a delete button or icon on each image */
+.image-preview-delete {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11; /* Make sure it's on top */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 11; /* Make sure it's on top */
+    width: 40%;  /* 40% of the screen width */
+    height: auto; /* 30% of the screen height */
+    margin: auto; /* Center the modal on the page */
+}
+
+.modal-close-icon {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    
+    /* Additional styles as needed */
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-evenly; /* This will space the buttons evenly */
+    align-items: center;
+    padding: 10px;
+}
+
+/* Continue with your button styles as defined earlier */
+
+
+.download-results-btn {
+    background-color: yellow; /* Adjust the shade of yellow as needed */
+    color: black; /* For the text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.download-braille-btn {
+    background-color: purple; /* Adjust the shade of purple as needed */
+    color: white; /* For the text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Add hover effects for better user experience */
+.download-results-btn:hover, .download-braille-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* Style for your new Braille download button */
+
+
+.image-preview {
+    /* Existing styles */
+    cursor: grab;
+}
+
+.image-preview:active {
+    cursor: grabbing;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+/* Optional: Style for the drop target */
+.over {
+    border: 2px dashed #000; /* Example style */
+}
+
+.page-number {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Reset Button Styles */
+.reset-btn {
+    background-color: #ff4d4d; /* A shade of red for caution */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Adequate padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor to indicate it's clickable */
+    font-weight: bold; /* Bold text */
+    margin-right: 10px; /* Margin to separate from the submit button */
+    margin-top: 10px;
+}
+
+.reset-btn:hover {
+    background-color: #e60000; /* Slightly darker red on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-top: 10px;
+}
+
+/* Submit Button Styles */
+.submit-btn {
+    background-color: #80e27e; /* Light green for go-ahead */
+    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Consistent padding with reset button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor change for interactivity */
+    font-weight: bold; /* Bold text */
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #66cc66; /* A slightly darker shade of green on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-top: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-bottom: 20px; /* Spacing below the button container */
+}
+
+
+.image-preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center; /* Center the cards in the container */
+}
+
+.image-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 15%; /* Width of the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s ease;
+    cursor: grab;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #cbcbcb;
+}
+
+.image-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.image-card img {
+    width: 100%;
+    height: 150px; /* Fixed height for images */
+    object-fit: contain; /* Ensures the entire image fits in the card */
+    background-color: #f8f8f8; /* Background color for empty areas in the card */
+}
+
+.card-body {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.page-number {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+.over {
+    border: 2px dashed #000; /* Example style for drag over */
+}
+
+.image-container {
+    padding: 10px; /* This creates a 10px space around the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* In case the image overflows due to rotation */
+    position: relative;
+}
+
+.image-container img {
+    max-width: calc(100% - 20px); /* Subtract double the padding */
+    max-height: calc(100% - 20px); /* Subtract double the padding */
+    height: auto;
+    width: auto;
+    object-fit: contain; /* This will ensure the aspect ratio is maintained */
+}
+
+.remove-btn, .rotate-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    color: #333; /* Or any color you prefer */
+}
+
+.remove-btn:hover, .rotate-btn:hover {
+    color: #666; /* Darker shade on hover for better UX */
+}
+
+.image-card .button-containers {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    z-index: 10; /* Make sure it's on top */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.header-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-container h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.header-container p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tutorial-btn, .manual-btn {
+    background-color: #007bff; /* Example color */
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.tutorial-btn:hover, .manual-btn:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+}

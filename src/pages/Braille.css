@@ -1,0 +1,75 @@
+.braille-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    padding: 20px; /* Optional padding */
+}
+
+.header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.header p {
+    color: #666;
+}
+
+.upload-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.upload-section button {
+    /* Size and Shape */
+    padding: 50px 100px; /* Increased padding for a larger button */
+    border-radius: 30px; /* Rectangular shape with slightly rounded corners */
+
+    /* Color and Contrast */
+    background-color: #007bff; /* Example primary brand color - can be changed */
+    color: white; /* High contrast text */
+    border: none; /* Remove default border */
+
+    /* Text and Icons */
+    font-size: 32px; /* Larger font for better readability */
+    font-weight: bold; /* Bold text for prominence */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-section button:hover {
+    background-color: #0056b3;
+}
+
+.file-list-container {
+    width: 40%;  /* 40% of the screen width */
+    height: auto; /* 30% of the screen height */
+    margin: auto; /* Center the modal on the page */
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.file-name {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.delete-file-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+}
+
+.delete-file-btn:hover {
+    color: darkred;
+}
