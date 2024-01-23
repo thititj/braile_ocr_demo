@@ -1,65 +1,108 @@
 /* About.module.css */
+
+.aboutContainer h1 {
+  font-size: 2  em;
+  margin-bottom: 10px;
+}
+
 .aboutContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
   
-  .teamSection, .ctaSection {
-    margin-bottom: 2rem;
-  }
-  
-  .teamMembers {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .teamMember {
-    text-align: center;
-    margin: 1rem;
-  }
-  
-  .memberImage {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
-  
-  .mapsAndSocial {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  
-  .map {
-    margin: 1rem;
-  }
-  
-  .socialButton {
-    background-color: #4267B2; /* Facebook blue */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-  }
-  
-  .socialButton:hover {
-    background-color: #365899; /* Darker Facebook blue */
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .teamMembers, .mapsAndSocial {
+
+  @media only screen and (max-width: 768px) {
+
+    /* Adjust styles for screens up to 768px wide */
+    .teamMembers {
+      display: flex;
       flex-direction: column;
       align-items: center;
     }
+
+    .teamMember {
+      width: 100%;
+      max-width: 300px;
+      /* Adjust the max-width as needed */
+      margin-bottom: 20px;
+    }
   }
-  
+
+  @media only screen and (max-width: 480px) {
+
+    /* Adjust styles for screens up to 480px wide */
+    .teamMember {
+      max-width: 100%;
+      /* Use full width for smaller screens */
+    }
+  }
+}
+
+.teamHeading {
+  text-align: center;
+  margin-bottom: 20px;
+  /* Adjust as needed */
+}
+
+.teamSection,
+.ctaSection {
+  margin-bottom: 2rem;
+}
+
+.teamMembers {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Professor styles */
+.professor {
+  order: -1;
+  /* Set a negative order to move professors to the top */
+}
+
+.teamMember {
+  text-align: center;
+  margin: 1rem;
+}
+
+.memberImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}x
+
+.map {
+  margin: 1rem;
+}
+
+.socialButton {
+  background-color: #4267B2;
+  /* Facebook blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.socialButton:hover {
+  background-color: #365899;
+  /* Darker Facebook blue */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .teamMembers,
+  .mapsAndSocial {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

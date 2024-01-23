@@ -82,6 +82,7 @@ const OCR = () => {
             const formData = new FormData();
             formData.append('image', file);
             formData.append('folderName', folderName);
+            formData.append('pageNumber', i + 1)
 
             try {
                 await axios.post('http://localhost:5000/api/ocr/submit', formData, {
@@ -119,7 +120,8 @@ const OCR = () => {
             const url = window.URL.createObjectURL(new Blob([response.data]));
             const link = document.createElement('a');
             link.href = url;
-            link.setAttribute('download', `${sessionFolderName}_ocr_results.zip`); // Name the download file
+            // link.setAttribute('download', `ocr_results_${sessionFolderName}.zip`); // Name the download file
+            link.setAttribute('download', `ocr_results.zip`); // Name the download file
             document.body.appendChild(link);
             link.click();
             link.remove();
@@ -200,34 +202,34 @@ const OCR = () => {
         <div className="ocr-app">
             <div className="header-container">
                 <h1>Thai OCR</h1>
-                <p>Service for converting image to docx files with a simple click.</p>
+                <p>บริการแปลงรูปถ่ายเอกสารเป็นข้อความภาษาไทย ท่านสามารถคลิกที่ปุ่มอัปโหลดเพื่อทำการเลือกรูปที่ต้องการแปลงเป็นข้อความ และกดยืนยันเพื่อเริ่มการประมวลผล</p>
                 <div className="button-group">
                     <a href="YOUR_YOUTUBE_TUTORIAL_LINK" target="_blank" className="tutorial-btn">
-                    <span className="upload-btn-icon">
-                    <FontAwesomeIcon icon={faVideoCamera} /> 
-                </span>
-                    วิดีโอสาธิตการใช้งาน</a>
+                        <span className="upload-btn-icon">
+                            <FontAwesomeIcon icon={faVideoCamera} />
+                        </span>
+                        วิดีโอสาธิตการใช้งาน</a>
                     <a href="YOUR_PDF_MANUAL_LINK" target="_blank" className="manual-btn">
-                    <span className="upload-btn-icon">
-                    <FontAwesomeIcon icon={faFileAlt} /> 
-                </span>
-                    ไฟล์คู่มือการใช้งาน</a>
+                        <span className="upload-btn-icon">
+                            <FontAwesomeIcon icon={faFileAlt} />
+                        </span>
+                        ไฟล์คู่มือการใช้งาน</a>
                 </div>
             </div>
             <button className="upload-btn" onClick={handleClickUpload}>
-    <span className="upload-btn-icon">
-        <FontAwesomeIcon icon={faUpload} />
-    </span>
-    <div>Upload</div>
-    <p>Supports .jpg, .png, .jpeg</p>
-</button>
-            <input type="file" accept="image/*" onChange={handleFileChange} ref={hiddenFileInput} multiple style={{ display: 'none' }} />
+                <span className="upload-btn-icon">
+                    <FontAwesomeIcon icon={faUpload} />
+                </span>
+                <div>อัปโหลด</div>
+                <p>รองรับเฉพาะไฟล์นามสกุล .jpg, .png, .jpeg</p>
+            </button>
+            <input type="file" accept=".jpg, .jpeg, .png" onChange={handleFileChange} ref={hiddenFileInput} multiple style={{ display: 'none' }} />
 
 
             {selectedFiles.length > 0 && (
                 <div className="button-container">
-                    <button className="reset-btn" onClick={resetSelection}>Reset Selection</button>
-                    <button className="submit-btn" onClick={handleImageSubmit}>Submit</button>
+                    <button className="reset-btn" onClick={resetSelection}>ล้างทั้งหมด</button>
+                    <button className="submit-btn" onClick={handleImageSubmit}>ยืนยัน</button>
                 </div>
             )}
             <div className="image-preview-container">
@@ -271,8 +273,7 @@ const OCR = () => {
                 {completedCount === selectedFiles.length && selectedFiles.length > 0 && (
                     <div className="button-row">
                         <button onClick={handleDownload} className="download-results-btn">Download Results</button>
-                        <button className="download-braille-btn" >Download Braille</button>
-                        </div>
+                    </div>
                 )}
             </Modal>
         </div>

@@ -1,37 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
-import { FeatureCard } from '../components/FeatureCard';
-{ /*import fastIcon from "../assets/fast.svg";*/}
+import FeatureCard from '../components/FeatureCard';
+import thai from './../assets/1.svg';
+import fast from './../assets/2.svg';
+import imagetotext from './../assets/3.svg';
+import texttobraille from './../assets/4.svg';
+import easy from './../assets/5.svg';
 
 
 const Home = () => {
 
     const features = [
         {
-            title: "Support for Thai Languages",
-            description: "Efficiently handles Thai script for accurate conversions.",
-            icon: "path/to/accuracy-icon.svg"
+            title: "รองรับหนังสือภาษาไทย",
+            description: "รองรับข้อความภาษาไทย",
+            icon: thai
         },
         {
-            title: "High Accuracy and Fast Processing",
-            description: "Quickly converts images to text with high precision.",
-            icon: "path/to/accuracy-icon.svg" 
+            title: "ประมวลผลได้อย่างรวดเร็วและแม่นยำ",
+            description: "สามารถแปลงรูปภาพเป็นข้อความและแปลงข้อความเป็นภาษาเบรลล์ได้อย่างรวดเร็ว",
+            icon: fast
         },
         {
-            title: "Convert Image to Text",
-            description: "Seamlessly convert images into editable text.",
-            icon: "path/to/accuracy-icon.svg" 
+            title: "แปลงรูปภาพเป็นข้อความ",
+            description: "บริการแปลงรูปถ่ายเอกสารเป็นข้อความ",
+            icon: imagetotext
         },
         {
-            title: "Convert Text to Braille",
-            description: "Easily translate text into Braille for accessibility.",
-            icon: "path/to/accuracy-icon.svg"
+            title: "แปลงข้อความเป็นภาษาเบรลล์",
+            description: "บริการแปลงข้อความเป็นภาษาเบรลล์",
+            icon: texttobraille
         },
         {
-            title: "Easy to Use",
-            description: "User-friendly interface for hassle-free navigation.",
-            icon: "path/to/accuracy-icon.svg"
+            title: "ใช้งานง่าย",
+            description: "หน้าเว็บใช้งานง่ายและเข้าถึงได้จากทุกที่",
+            icon: easy
         }
     ];
 
@@ -40,12 +44,12 @@ const Home = () => {
             {/* Hero Section */}
             <section className={styles.heroSection}>
                 <div className={styles.homeContainer}>
-                    <h1 className={styles.welcomeText}>Welcome to Image-to-Text and Text-to-Braille Converter</h1>
-                    <p className={styles.descriptionText}>This is a tool that helps you convert images to text and text to Braille.</p>
+                    <h1 className={styles.welcomeText}>OCR & Text to Braille</h1>
+                    <p className={styles.descriptionText}>เว็บแอปพลิเคชันบริการแปลงรูปถ่ายเอกสารเป็นข้อความ (OCR) และบริการแปลงข้อความเป็นอักษรเบรลล์ (Braille)</p>
                 </div>
                 <div className={styles.heroButtons}>
-                    <Link to="/ocr" className={styles.heroButton}>OCR Service</Link>
-                    <Link to="/braille" className={styles.heroButton}>Braille Conversion</Link>
+                    <Link to="/ocr" className={styles.heroButton}>OCR</Link>
+                    <Link to="/braille" className={styles.heroButton}>Braille</Link>
                 </div>
             </section>
 
@@ -57,12 +61,6 @@ const Home = () => {
                         <FeatureCard key={index} feature={feature} />
                     ))}
                 </div>
-            </section>
-
-            {/* Sponsors Section */}
-            <section className={styles.sponsors}>
-                <h2>Our Sponsors</h2>
-                {/* Add sponsor logos or names here */}
             </section>
         </div>
     );

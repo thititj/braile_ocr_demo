@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
+
 const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -13,7 +14,7 @@ const Footer = () => {
           <Link to="/braille" className={styles.footerLink}>Braille</Link>
         </div>
         <div className={styles.contactInfo}>
-          <span>Email: example@example.com</span>
+          <span>Email: ds.sci.cmu@gmail.com</span>
           {/* Add social media icons here */}
         </div>
         <div className={styles.copyRight}>

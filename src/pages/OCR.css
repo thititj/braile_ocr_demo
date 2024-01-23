@@ -13,8 +13,8 @@
     border-radius: 30px; /* Rectangular shape with slightly rounded corners */
 
     /* Color and Contrast */
-    background-color: #007bff; /* Example primary brand color - can be changed */
-    color: white; /* High contrast text */
+    background-color: #2196f3; /* Example primary brand color - can be changed */
+    color: rgb(255, 255, 255); /* High contrast text */
     border: none; /* Remove default border */
 
     /* Text and Icons */
@@ -37,7 +37,7 @@
 
 /* Hover Effect */
 .upload-btn:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
+    background-color: #1d87dd; /* Darker shade for hover effect */
     cursor: pointer; /* Cursor change to indicate clickability */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Slightly larger shadow for depth */
 }
@@ -253,7 +253,7 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow: hidden;
-    width: 15%; /* Width of the card */
+    width: 200px; /* Width of the card */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.2s ease;
     cursor: grab;
@@ -342,7 +342,7 @@
 }
 
 .header-container h1 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
@@ -358,8 +358,8 @@
 }
 
 .tutorial-btn, .manual-btn {
-    background-color: #007bff; /* Example color */
-    color: white;
+    background-color: #2196f3; /* Example color */
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -368,5 +368,5 @@
 }
 
 .tutorial-btn:hover, .manual-btn:hover {
-    background-color: #0056b3; /* Darker shade for hover */
+    background-color: #1d87dd; /* Darker shade for hover */
 }

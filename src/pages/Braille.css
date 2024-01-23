@@ -27,7 +27,7 @@
     border-radius: 30px; /* Rectangular shape with slightly rounded corners */
 
     /* Color and Contrast */
-    background-color: #007bff; /* Example primary brand color - can be changed */
+    background-color: #4caf50; /* Example primary brand color - can be changed */
     color: white; /* High contrast text */
     border: none; /* Remove default border */
 
@@ -41,7 +41,7 @@
 }
 
 .upload-section button:hover {
-    background-color: #0056b3;
+    background-color: #429845;
 }
 
 .file-list-container {
@@ -72,4 +72,18 @@
 
 .delete-file-btn:hover {
     color: darkred;
+}
+
+.tutorial-btn-b, .manual-btn-b {
+    background-color: #4caf50; /* Example color */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.tutorial-btn-b:hover, .manual-btn-b:hover {
+    background-color: #429845   ; /* Darker shade for hover */
 }

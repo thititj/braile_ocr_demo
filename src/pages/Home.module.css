@@ -21,21 +21,6 @@
     border-radius: 5px;
 }
 
-.keyFeatures {
-    padding: 2rem;
-    background-color: #f8f9fa;
-    text-align: center;
-}
-
-.keyFeatures ul {
-    list-style: none;
-    padding: 0;
-}
-
-.keyFeatures li {
-    margin-bottom: 0.5rem;
-}
-
 .sponsors {
     padding: 2rem;
     background-color: #fff;
@@ -62,24 +47,23 @@
 /* Home.module.css */
 .keyFeatures {
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     text-align: center;
-  }
-  
-  .featureCards {
+}
+
+.featureCards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
-  }
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
 
-  .teamMember img {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* This ensures the aspect ratio is maintained */
-    margin: 0 auto; /* Center the icon if needed */
-  }
 
-  .icon {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* This ensures the aspect ratio is maintained */
-  }
+.icon {
+    width: 50px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* This ensures the aspect ratio is maintained */
+}

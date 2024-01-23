@@ -1,38 +1,57 @@
 import React from 'react';
 import styles from './About.module.css';
+import ajvarin from '../assets/members/ajvarin.jpg'
+import ajbenjamas from '../assets/members/ajbenjamas.jpg'
+import ice from '../assets/members/ice.jpg'
+import meen from '../assets/members/meen.jpg'
+import fluke from '../assets/members/fluke.jpg'
 // Import additional components or images as needed
 
 const About = () => {
     return (
         <div className={styles.aboutContainer}>
+
             <section className={styles.teamSection}>
-                <h2>Meet Our Team</h2>
+            <h1 className={styles.teamHeading}>Meet Our Team</h1>
                 <div className={styles.teamMembers}>
-                    {/* Replace with actual team member details */}
-                    <div className={styles.teamMember}>
-                        <img src="path_to_image" alt="Team Member" className={styles.memberImage} />
-                        <h3>Member Name</h3>
-                        <p>Expertise and Experience</p>
+
+                    {/* Professor 1 */}
+                    <div className={`${styles.teamMember} ${styles.professor}`}>
+                        <img src={ajvarin} alt="Team Member" className={styles.memberImage} />
+                        <h3>รองศาสตราจารย์ ดร.วาริน เชาวทัต</h3>
+                        <p>อาจารย์ที่ปรึกษาโครงการ</p>
                     </div>
-                    <div className={styles.teamMember}>
-                        <img src="path_to_image" alt="Team Member" className={styles.memberImage} />
-                        <h3>Member Name</h3>
-                        <p>Expertise and Experience</p>
+
+                    {/* Professor 2 */}
+                    <div className={`${styles.teamMember} ${styles.professor}`}>
+                        <img src={ajbenjamas} alt="Team Member" className={styles.memberImage} />
+                        <h3>ผู้ช่วยศาสตราจารย์ เบญจมาศ ปัญญางาม</h3>
+                        <p>อาจารย์ที่ปรึกษาโครงการ</p>
                     </div>
-                    <div className={styles.teamMember}>
-                        <img src="path_to_image" alt="Team Member" className={styles.memberImage} />
-                        <h3>Member Name</h3>
-                        <p>Expertise and Experience</p>
+                </div>
+            </section>
+
+            <section className={styles.teamSection}>
+                <div className={styles.teamMembers}>
+                    {/* Student 1 */}
+                    <div className={`${styles.teamMember} ${styles.student}`}>
+                        <img src={fluke} alt="Team Member" className={styles.memberImage} />
+                        <h3>นายฐิติพงศ์ จันทวี</h3>
+                        <p>นักศึกษาผู้ช่วยวิจัย</p>
                     </div>
-                    <div className={styles.teamMember}>
-                        <img src="path_to_image" alt="Team Member" className={styles.memberImage} />
-                        <h3>Member Name</h3>
-                        <p>Expertise and Experience</p>
+
+                    {/* Student 2 */}
+                    <div className={`${styles.teamMember} ${styles.student}`}>
+                        <img src={ice} alt="Team Member" className={styles.memberImage} />
+                        <h3>นายภานุพงษ์ เกี๋ยงคำ </h3>
+                        <p>นักศึกษาผู้ช่วยวิจัย</p>
                     </div>
-                    <div className={styles.teamMember}>
-                        <img src="path_to_image" alt="Team Member" className={styles.memberImage} />
-                        <h3>Member Name</h3>
-                        <p>Expertise and Experience</p>
+
+                    {/* Student 3 */}
+                    <div className={`${styles.teamMember} ${styles.student}`}>
+                        <img src={meen} alt="Team Member" className={styles.memberImage} />
+                        <h3>นางสาวณัฐจิรา อุดสุข</h3>
+                        <p>นักศึกษาผู้ช่วยวิจัย</p>
                     </div>
                 </div>
             </section>
@@ -57,7 +76,7 @@ const About = () => {
                     <div className={styles.map}>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d445.61263655375006!2d98.95333930631445!3d18.80344838510773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30da3a69754ca1d1%3A0x9325c5a7a1d096dd!2sSCB4!5e0!3m2!1sth!2sth!4v1701972499260!5m2!1sth!2sth"
-                            width="600"
+                            width="100% "     
                             height="450"
                             allowFullScreen
                             loading="lazy"
